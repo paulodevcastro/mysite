@@ -8,76 +8,13 @@
     box-sizing: border-box;
 }
 
-nav{
-    background-color: rgba(0, 0, 0, 248);
-    height: 80px;
-    width: 100%;
-}
-
-label.logo{
-    font-family: "Handjet", sans-serif;
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: 400;
-}
-
-nav ul{
-    float: right;
-    margin-right: 20px;
-}
-
-nav ul li{
-    font-family: "Bricolage Grotesque";
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-
-nav ul li a{
-    color: white;
-    font-size: 16px;
-    padding: 6px 12px;
-    border-radius: 0.5rem;
-    transition: all 0.5s;
-}
-
-a.active, a:hover{
-    background: rgb(49, 48, 48);
-}
-
-label.checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#check{
-    display: none;
-}
-
-@media (max-width: 1060px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-
 body{
     background: #010718;
 }
 
 .container{
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,6 +50,12 @@ body{
     margin-bottom: 10%;
 }
 
+@media (max-width: 850px){
+    .container h1{
+        font-size: 24px;
+    }
+}
+
 .container-about{
     background: rgba(248, 248, 248, 0.8);
     padding: 40px;
@@ -122,6 +65,10 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 20px;
+}
+
+.about{
+    display: flex;
 }
 
 .left-datas h1{
@@ -140,6 +87,51 @@ body{
     font-family: "Bricolage Grotesque", sans-serif;
     margin-top: 14px;
     width: 50%;
+}
+
+.apart{
+    margin-top: 12px;
+}
+
+.apart h4{
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.apart ul li{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 14px;
+}
+
+.right-datas img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 850px) {
+    .container-about{
+        text-align: center;
+        justify-content: center;
+    }
+    .container-about .about-title h1{
+        text-align: center;
+        justify-content: center;
+    }
+    .about{
+        display: inline-block;
+    }
+    .left-datas h1{
+        font-size: 20px;
+    }
+    .left-datas span{
+        font-size: 12px;
+    }
+    .left-datas p{
+        width: 100%;
+    }
 }
 
 .container-knowledge{
@@ -177,7 +169,6 @@ body{
     transform: rotate(calc(360deg / 7 * var(--i)));
 }
 
-/* ver como esmaecer os icones*/
 .menu li i{
     display: flex;
     justify-content: center;
@@ -226,8 +217,24 @@ body{
     min-height: 85vh;
 }
 
+@media (max-width: 768px){
+    .menu li i{
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+    }
+    .toogle img{
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 650px){
+
+}
+
 .container-projects{
-    background: #233142;
+    background: #e4e4e4f6;
     padding: 40px;
 }
 
@@ -235,14 +242,26 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 20px;
-    color: white;
+    color: #111111;
     text-align: end;
 }
 
 .container-projects .description{
     font-family: "Poppins", sans-serif;
     text-align: end;
-    color: white;
+    color: #111111;
+}
+
+@media (max-width: 850px){
+    .container-projects .title h1{
+        text-align: center;
+        justify-content: center;
+    }
+    .container-projects .description{
+        font-size: 12px;
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 .container-contact{
@@ -342,4 +361,52 @@ body{
 
 .right-contact button:hover{
     background: linear-gradient(300deg, rgba(48, 48, 48, 0.87) 25%, #65862ac5 100%);
+}
+
+@media (max-width: 850px){
+    .left-contact {
+        display: none;
+    }
+    .right-contact{
+        width: 70%;
+        padding: 1rem;
+    }
+}
+
+.container-footer{
+    background: rgba(0, 0, 0, 0.712);
+    padding: 3.5rem;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer .description{
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 200;
+    color: white;
+}
+
+footer .description a{
+    text-decoration: none;
+    color: #4070F4;
+}
+
+footer .social-medias ul{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+footer .social-medias ul li i{
+    font-size: 1.4rem;
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+footer .social-medias ul li i:hover{
+    color: #4070F4;
 }

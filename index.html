@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="./favicons/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -12,17 +13,6 @@
 </head>
 
 <body>
-    <!--navbar-->
-    <nav>
-        <label class="logo">Paulo Guilherme</label>
-        <ul>
-            <li><a href="" class="active">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Conhecimentos</a></li>
-            <li><a href="">Projetos</a></li>
-            <li><a href="">Contato</a></li>
-        </ul>
-    </nav>
     <!--Home-->
     <div class="container">
         <h1>Olá! Eu sou <span class="auto-type"></span></h1>
@@ -40,12 +30,22 @@
                 <div class="left-datas">
                     <h1>Paulo Guilherme de Castro Furtado</h1>
                     <span>Developer Back-End Java</span>
-                    <p>Estou nesse ciclo infinito e crescente da tecnologia desde 2020, até o presente momento viso melhorar minhas
+                    <p>Estou nesse ciclo infinito e crescente da tecnologia desde 2020, até o presente momento viso
+                        melhorar minhas
                         habilidades e qualificações no mercado de trabalho.
                     </p>
+                    <div class="apart">
+                        <h4>Competências apartadas de programação</h4>
+                        <ul>
+                            <li>Agile Scrum</li>
+                            <li>Jira Confluence</li>
+                            <li>Jenkins</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="right-datas">
                     <!--espaço para imagem do dev-->
+                    <img src="./assets/images/dev-photo.png" alt="">
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
             <div class="spectral-base">
                 <div class="menu">
                     <div class="toogle">
-                        <img src="./assets/images/dev-productivity.svg" alt="">
+                        <img src="./assets/images/dev-productivity.svg" alt="productivity">
                         <li class="k-1" style="--i:0;">
                             <i class="fa-brands fa-java"></i>
                         </li>
@@ -106,19 +106,34 @@
                 <form action="#">
                     <i class="fa-regular fa-user"></i>
                     <label for="name">Digite seu nome</label>
-                    <input type="text" 
-                            id="name"
-                            required="true"> 
+                    <input type="text" id="name" required="true">
                     <label for="email">Digite seu melhor e-mail</label>
-                    <input type="email"
-                            id="email"
-                            required="true">
+                    <input type="email" id="email" required="true">
                     <label for="message">Mande seu feedback</label>
                     <textarea name="space-for-message" id="message" cols="30" rows="10"></textarea>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
         </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-footer">
+        <footer>
+            <div class="description">
+                Copyright &copy - Todos os direitos reservados - Desenvolvido por <a
+                    href="https://github.com/paulodevcastro">paulodevcastro</a>
+                <p>Icons by <a href="https://fontawesome.com/">fontawesome</a></p>
+                <p>Images by <a href="https://undraw.co/">undraw</a></p>
+            </div>
+            <div class="social-medias">
+                <ul>
+                    <li><i class="fa-brands fa-discord"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><i class="fa-brands fa-telegram"></i></li>
+                </ul>
+            </div>
+        </footer>
     </div>
 
     <!--libs para o js-->
