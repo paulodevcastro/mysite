@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&family=Fira+Code:wght@300;400;500;600;700&family=Handjet:wght@200;300;400&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -8,11 +8,11 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #010718;
 }
 
-.container{
+.container {
     width: 100%;
     height: 80vh;
     display: flex;
@@ -20,25 +20,25 @@ body{
     justify-content: center;
 }
 
-.container h1{
+.container h1 {
     color: white;
     font-family: "Archivo Black", sans-serif;
     font-size: 40px;
     font-weight: 600;
 }
 
-.container span{
+.container span {
     color: #4070F4;
 }
 
-.btn-know-more{
+.btn-know-more {
     display: block;
     text-align: center;
     justify-content: center;
 }
 
-.btn-know-more button{
-    background: linear-gradient(90deg, #19378a 0%, rgba(67,4,98,1) 72%);
+.btn-know-more button {
+    background: linear-gradient(90deg, #19378a 0%, rgba(67, 4, 98, 1) 72%);
     padding: 16px 28px;
     border: none;
     font-family: "Bricolage Grotesque", sans-serif;
@@ -50,61 +50,67 @@ body{
     margin-bottom: 10%;
 }
 
-@media (max-width: 850px){
-    .container h1{
+@media (max-width: 850px) {
+    .container h1 {
         font-size: 24px;
     }
 }
 
-.container-about{
+@media (max-width: 400px) {
+    .container h1 {
+        font-size: 18px;
+    }
+}
+
+.container-about {
     background: rgba(248, 248, 248, 0.8);
     padding: 40px;
 }
 
-.container-about .about-title h1{
+.container-about .about-title h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 20px;
 }
 
-.about{
+.about {
     display: flex;
 }
 
-.left-datas h1{
+.left-datas h1 {
     font-family: "Heebo", sans-serif;
     font-weight: bold;
     font-size: 32px;
 }
 
-.left-datas span{
+.left-datas span {
     background: rgba(20, 202, 75, 0.829);
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 18px;
 }
 
-.left-datas p{
+.left-datas p {
     font-family: "Bricolage Grotesque", sans-serif;
     margin-top: 14px;
     width: 50%;
 }
 
-.apart{
+.apart {
     margin-top: 12px;
 }
 
-.apart h4{
+.apart h4 {
     font-family: "Heebo", sans-serif;
     font-weight: bold;
     font-size: 16px;
 }
 
-.apart ul li{
+.apart ul li {
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 14px;
 }
 
-.right-datas img{
+.right-datas img {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -112,29 +118,49 @@ body{
 }
 
 @media (max-width: 850px) {
-    .container-about{
+    .container-about {
         text-align: center;
         justify-content: center;
     }
-    .container-about .about-title h1{
+
+    .container-about .about-title h1 {
         text-align: center;
         justify-content: center;
     }
-    .about{
+
+    .about {
         display: inline-block;
     }
-    .left-datas h1{
+
+    .left-datas h1 {
         font-size: 20px;
     }
-    .left-datas span{
-        font-size: 12px;
+
+    .left-datas span {
+        font-size: 14px;
     }
-    .left-datas p{
+
+    .left-datas p {
         width: 100%;
     }
 }
 
-.container-knowledge{
+@media (max-width: 400px) {
+    .left-datas h1 {
+        font-size: 16px;
+    }
+
+    .left-datas p {
+        font-size: 14px;
+    }
+
+    .right-datas img {
+        width: 230px;
+        height: 230px;
+    }
+}
+
+.container-knowledge {
     background: rgba(234, 234, 234, 0.8);
     padding: 40px;
 }
@@ -147,16 +173,16 @@ body{
     justify-content: center;
 }
 
-.menu{
+.menu {
     position: relative;
     width: 500px;
     height: 500px;
     display: flex;
     justify-content: center;
-    align-items: center   
+    align-items: center
 }
 
-.menu li{
+.menu li {
     position: absolute;
     left: 0;
     transform-origin: 250px;
@@ -165,11 +191,11 @@ body{
     transform: rotate(0deg) translateX(250px);
 }
 
-.menu.active li{
+.menu.active li {
     transform: rotate(calc(360deg / 7 * var(--i)));
 }
 
-.menu li i{
+.menu li i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,21 +210,21 @@ body{
     cursor: pointer;
 }
 
-.menu.active li i{
+.menu.active li i {
     visibility: visible;
 }
 
-.menu li i:hover{
+.menu li i:hover {
     color: #4070F4;
 }
 
-.toogle{
+.toogle {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.toogle img{
+.toogle img {
     width: 300px;
     height: 300px;
     cursor: pointer;
@@ -206,39 +232,78 @@ body{
     transition: transform 1.25s;
 }
 
-.menu.active .toogle img{
+.menu.active .toogle img {
     transform: rotate(360deg);
 }
 
-.spectral-base{
+.spectral-base {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 85vh;
 }
 
-@media (max-width: 768px){
-    .menu li i{
+@media (max-width: 768px) {
+    .menu li {
+        transform-origin: 240px;
+    }
+
+    .menu li i {
         font-size: 30px;
         width: 60px;
         height: 60px;
     }
-    .toogle img{
+
+    .toogle img {
         width: 220px;
         height: 220px;
     }
+
+    .spectral-base {
+        min-height: 60vh;
+    }
 }
 
-@media (max-width: 650px){
-
+@media (max-width: 500px) {
+    .menu li {
+        transform-origin: 175px;
+    }
+    .toogle img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
-.container-projects{
+@media (max-width: 400px) {
+    .menu li {
+        transform-origin: 150px;
+    }
+    .menu li i{
+        width: 55px;
+        height: 55px;
+    }
+    .toogle img {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 375px){
+    .menu li {
+        transform-origin: 135px;
+    }
+    .toogle img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.container-projects {
     background: #e4e4e4f6;
     padding: 40px;
 }
 
-.container-projects .title h1{
+.container-projects .title h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -246,31 +311,32 @@ body{
     text-align: end;
 }
 
-.container-projects .description{
+.container-projects .description {
     font-family: "Poppins", sans-serif;
     text-align: end;
     color: #111111;
 }
 
-@media (max-width: 850px){
-    .container-projects .title h1{
+@media (max-width: 850px) {
+    .container-projects .title h1 {
         text-align: center;
         justify-content: center;
     }
-    .container-projects .description{
+
+    .container-projects .description {
         font-size: 12px;
         text-align: center;
         justify-content: center;
     }
 }
 
-.container-contact{
-    background: rgb(0,0,0);
-    background: linear-gradient(302deg, rgba(0,0,0,1) 25%, rgba(0,13,61,0.9724264705882353) 100%);
+.container-contact {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(302deg, rgba(0, 0, 0, 1) 25%, rgba(0, 13, 61, 0.9724264705882353) 100%);
     padding: 40px;
 }
 
-.container-contact .title h1{
+.container-contact .title h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -278,13 +344,13 @@ body{
     text-align: center;
 }
 
-.side-contact{
+.side-contact {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.left-contact img{
+.left-contact img {
     width: 480px;
     height: 480px;
     overflow: hidden;
@@ -293,14 +359,14 @@ body{
     border-radius: .3rem 0;
 }
 
-.left-contact ul{
+.left-contact ul {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     width: 20%;
 }
 
-.right-contact{
+.right-contact {
     background: rgba(0, 0, 0, 0.4);
     width: 30%;
     height: auto;
@@ -308,20 +374,20 @@ body{
     border-radius: 0 .5rem;
 }
 
-.right-contact i{
+.right-contact i {
     display: block;
     text-align: center;
     justify-content: center;
     color: rgba(20, 202, 75, 0.829);
 }
 
-.right-contact label{
+.right-contact label {
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 14px;
     color: #ffffff;
 }
 
-.right-contact input{
+.right-contact input {
     display: block;
     justify-content: center;
     background: #e8e8e8;
@@ -336,7 +402,7 @@ body{
     color: #010718;
 }
 
-.right-contact textarea{
+.right-contact textarea {
     background: #e8e8e8;
     display: block;
     width: 100%;
@@ -346,9 +412,11 @@ body{
     margin-bottom: 20px;
     padding: 10px;
     border-radius: .3rem;
+    font-family: "Heebo", sans-serif;
+    color: #010718;
 }
 
-.right-contact button{
+.right-contact button {
     border: none;
     width: 100%;
     padding: 12px 32px;
@@ -359,54 +427,83 @@ body{
     cursor: pointer;
 }
 
-.right-contact button:hover{
+.right-contact button:hover {
     background: linear-gradient(300deg, rgba(48, 48, 48, 0.87) 25%, #65862ac5 100%);
 }
 
-@media (max-width: 850px){
+@media (max-width: 820px) {
+    .container-contact .right-contact {
+        width: 80%;
+    }
+
     .left-contact {
         display: none;
     }
-    .right-contact{
+
+    .right-contact {
         width: 70%;
         padding: 1rem;
     }
 }
 
-.container-footer{
+@media (max-width: 550px){
+    .container-contact .right-contact{
+        width: 100%;
+    }
+    .right-contact{
+        width: 100%;
+    }
+}
+
+.container-footer {
     background: rgba(0, 0, 0, 0.712);
     padding: 3.5rem;
 }
 
-footer{
+footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-footer .description{
+footer .description {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 200;
     color: white;
 }
 
-footer .description a{
+footer .description a {
     text-decoration: none;
     color: #4070F4;
 }
 
-footer .social-medias ul{
+footer .social-medias ul {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
 }
 
-footer .social-medias ul li i{
+footer .social-medias ul li i {
     font-size: 1.4rem;
     color: white;
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
 
-footer .social-medias ul li i:hover{
+footer .social-medias ul li i:hover {
     color: #4070F4;
+}
+
+@media (max-width: 500px) {
+    .container-footer footer {
+        display: block;
+    }
+
+    .description {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .social-medias {
+        margin-top: 20px;
+    }
 }
